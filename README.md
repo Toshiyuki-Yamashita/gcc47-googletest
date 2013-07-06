@@ -20,6 +20,7 @@ cd build
 cmake ..
 make
 ./test/sample_test
+```
 
 ### MinGW
 
@@ -29,6 +30,7 @@ cd build
 cmake .. -G "MinGW Makefiles"
 make
 ./test/sample_test
+```
 
 ## ライセンス
 
