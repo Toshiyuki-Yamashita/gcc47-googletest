@@ -6,15 +6,15 @@ TDDBC for gcc with googletest
 ## 動作環境
 
 * -std=gnu++11 オプションが使用可能な g++
-** g++ 4.7 or 4.8 で動作確認しました
+ * g++ 4.7 or 4.8 で動作確認しました
 * 今のところ cmake 必須
-** TODO: Makefile の作成
+ * TODO: Makefile の作成
 
 ## ビルド とか
 
 ### Linux, Mac
 
-  bash
+```bash
 mkdir build
 cd build
 cmake ..
@@ -23,7 +23,7 @@ make
 
 ### MinGW
 
-  bash
+```bash
 mkdir build
 cd build
 cmake .. -G "MinGW Makefiles"
