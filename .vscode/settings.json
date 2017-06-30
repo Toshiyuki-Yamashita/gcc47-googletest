@@ -1,0 +1,5 @@
+// 既定の設定とユーザー設定を上書きするには、このファイル内に設定を挿入します
+{
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\bash.exe",
+    "terminal.integrated.shell.unixlike": "bash.exe"
+}
