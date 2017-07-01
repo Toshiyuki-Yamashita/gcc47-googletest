@@ -35,3 +35,19 @@ TEST_F(StockTest, test_stock_check_100yen) {
     tddbc::Stock stock;
     EXPECT_FALSE(stock.getCheck(100));
 }
+
+TEST_F(StockTest, test_stock_check_100yen_0) {
+    tddbc::Stock stock(0);
+    EXPECT_FALSE(stock.getCheck(100));
+}
+
+
+TEST_F(StockTest, test_stock_count0) {
+    tddbc::Stock stock(0);
+    EXPECT_EQ(0, stock.getCount());
+}
+
+TEST_F(StockTest, test_stock_check_120yen_0) {
+    tddbc::Stock stock(0);
+    EXPECT_FALSE(stock.getCheck(120));
+}

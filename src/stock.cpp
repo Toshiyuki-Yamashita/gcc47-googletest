@@ -2,8 +2,9 @@
 
 namespace tddbc
 {
-    Stock::Stock()
+    Stock::Stock(int stock)
     {
+        stock_count = stock;
     }
 
     std::string Stock::getJuiceName()
@@ -13,7 +14,7 @@ namespace tddbc
 
     int Stock::getCount()
     {
-        return 5;
+        return stock_count;
     }
 
     int Stock::getPrice()
@@ -22,7 +23,7 @@ namespace tddbc
     }
     bool Stock::getCheck(int total)
     {
-        return getPrice() <= total;
+        return getPrice() <= total && getCount() > 0;
     }
 }
 
