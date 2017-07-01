@@ -7,3 +7,5 @@
 *.la
 *.a
 build/
+.vs/
+CMakeSettings.json
