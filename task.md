@@ -16,7 +16,7 @@
     * class Vendor
         * bool insert(Money m);
         * total getTotal();
-        * bool payBack(); 
+        * bool payBack(total& change); 
     * enum Money お金
         * M_10YEN = 1
         * M_50YEN = 5

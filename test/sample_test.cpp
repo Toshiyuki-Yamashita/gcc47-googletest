@@ -11,6 +11,56 @@ protected:
   virtual void TearDown() {}
 };
 
-TEST_F(SampleTest, say_Hello_TDD_Boot_Camp) {
-  EXPECT_EQ("Hello TDD BootCamp!", tddbc::say());
+TEST_F(SampleTest, test10yencoin) {
+  tddbc::VendingMachine vm;
+  EXPECT_EQ( true, vm.insert(10));
+  EXPECT_EQ( 10, vm.getTotal());
 }
+
+TEST_F(SampleTest, test50yencoin) {
+  tddbc::VendingMachine vm;
+  EXPECT_EQ( true, vm.insert(50));
+  EXPECT_EQ( 50, vm.getTotal());
+}
+
+TEST_F(SampleTest, test10yencoinand50yencoin) {
+  tddbc::VendingMachine vm;
+  EXPECT_EQ( true, vm.insert(10));
+  EXPECT_EQ( true, vm.insert(50));
+  EXPECT_EQ( 60, vm.getTotal());
+}
+
+TEST_F(SampleTest, test10yenPayBack) {
+  tddbc::VendingMachine vm;
+  EXPECT_EQ( true, vm.insert(10));
+  EXPECT_EQ( 10, vm.payback());
+}
+
+TEST_F(SampleTest, test50yenPayBack) {
+  tddbc::VendingMachine vm;
+  EXPECT_EQ( true, vm.insert(50));
+  EXPECT_EQ( 50, vm.payback());
+}
+
+
+TEST_F(SampleTest, test50yenPayBackAgain) {
+  tddbc::VendingMachine vm;
+  EXPECT_EQ( true, vm.insert(50));
+  EXPECT_EQ( 50, vm.payback());
+  EXPECT_EQ( 0, vm.payback());
+}
+
+TEST_F(SampleTest, test1yenNotAdd) {
+  tddbc::VendingMachine vm;
+  EXPECT_EQ( true, vm.insert(1));
+  EXPECT_EQ( 0, vm.getTotal());
+}
+
+TEST_F(SampleTest, test10000yenNotAdd) {
+  tddbc::VendingMachine vm;
+  EXPECT_EQ( true, vm.insert(10000));
+  EXPECT_EQ( 0, vm.getTotal());
+}
+
+
+

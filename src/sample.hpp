@@ -1,5 +1,13 @@
 #include <string>
 
 namespace tddbc {
-  std::string say();
+  class VendingMachine
+  {
+    int total;
+    public:
+    VendingMachine();
+    bool insert(const int& amount);
+    int getTotal();
+    int payback();
+  };
 }
