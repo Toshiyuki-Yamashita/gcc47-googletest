@@ -20,5 +20,9 @@ namespace tddbc
     {
         return 120;
     }
+    bool Stock::getCheck(int total)
+    {
+        return getPrice() <= total;
+    }
 }
 

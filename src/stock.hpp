@@ -7,5 +7,6 @@ namespace tddbc {
     std::string getJuiceName();
     int getCount();
     int getPrice();
+    bool getCheck(int total);
   };
 }
