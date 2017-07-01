@@ -24,8 +24,7 @@ namespace tddbc {
         total += amount;
         break;
       default:
-        /* do nothing */;
-        break;
+         return false;      
     }
     return true;
   }
